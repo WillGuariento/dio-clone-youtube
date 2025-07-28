@@ -1,0 +1,218 @@
+@import url(reset.css);
+
+body {
+    background: #F9F9F9;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.menu-left button, .search-form button, .menu-right button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #606060;
+    padding: 8px;
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo img {
+    width: 90px;
+    cursor: pointer;
+}
+
+/* Formulário de pesquisa */
+.search-form {
+    flex: 1;
+    display: flex;
+    max-width: 600px;
+    margin: 0 24px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
+    font-size: 16px;
+}
+
+.search-form button {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 0 2px 2px 0;
+    padding: 8px 16px;
+}
+
+/* Ações à direita */
+.menu-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user img {
+    width: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* MAIN */
+/* Layout principal */
+.content {
+    display: flex;
+    gap: 24px;
+    padding: 80px 24px 24px; /* espaço pro header */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tornar a área do vídeo maior */
+.video-area {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Área do vídeo */
+.video-area h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+/* Info do vídeo */
+.info-video {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+.img-canal {
+    border-radius: 50%;
+}
+
+.info-canal {
+    flex: 1;
+}
+
+.info-canal h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.info-canal p {
+    font-size: 0.85rem;
+    color: #606060;
+}
+
+.subscribe {
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.like, .dislike, .share, .download {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 8px;
+    border-radius: 4px;
+}
+
+/* Descrição */
+.conteudo-video {
+    background: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de sugestões */
+.suggestions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestions h3 {
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+}
+
+.video-card {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.video-card img {
+    width: 160px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video-card .title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.video-card .channel,
+.video-card .views {
+    font-size: 0.85rem;
+    color: #606060;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .suggestions {
+        margin-top: 24px;
+    }
+
+    .video-card img {
+        width: 120px;
+        height: 68px;
+    }
+}
